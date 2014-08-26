@@ -669,7 +669,7 @@ int main(int argc, char* argv[])
         return -1;
     }
 
-    camera_info_manager::CameraInfoManager camera_info_manager(nh, "senz3d", "file:///home/haduong/calib/senz3d.yaml");
+    camera_info_manager::CameraInfoManager camera_info_manager(nh, "senz3d", "file:///" +  camera_calibration_yaml);
     //pub_projector_info_ = nh.advertise<sensor_msgs::CameraInfo>("camera_info", 1);
     cam_info = camera_info_manager.getCameraInfo();
 
